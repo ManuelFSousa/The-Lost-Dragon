@@ -1,11 +1,20 @@
 package dkeep.cli;
 
+import java.util.Scanner;
 import dkeep.logic.*;
 
 public class The_Lost_Dragon {
     public static void main(String[] args) throws Exception {
         Maps map = new Maps();
-        printMaze(map.maze);
+        Scanner scan = new Scanner(System.in);
+        char mov;
+
+        while(true){
+            printMaze(map.maze);
+            System.out.println("Por favor introduza a sua ação: ");
+            mov = scan.next().charAt(0);
+            
+        }
     }
 
     private static void printMaze(char[][] maze){
